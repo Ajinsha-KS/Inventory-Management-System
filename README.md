@@ -43,3 +43,16 @@ git clone https://github.com/your-username/inventory-management-system.git
 cd inventory-management-system
 pip install -r requirements.txt
 python manage.py runserver
+
+
+ 📸 Screenshots
+
+### Dashboard
+![Dashboard](dashboard.png)
+
+### Add Product
+![Add Product](add_product.png)
+
+### Transaction
+![Transaction](transaction.png)
+
