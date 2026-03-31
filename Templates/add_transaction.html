@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Transaction</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Stock Transaction</h2>
+        <a href="{% url 'dashboard' %}" class="btn btn-secondary">Back</a>
+    </div>
+
+    <!-- Error Message -->
+    {% if error %}
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    <!-- Card -->
+    <div class="card shadow p-4">
+        <form method="POST">
+            {% csrf_token %}
+
+            <!-- Product -->
+            <div class="mb-3">
+                <label class="form-label">Product</label>
+                {{ form.product }}
+            </div>
+
+            <!-- Type -->
+            <div class="mb-3">
+                <label class="form-label">Transaction Type</label>
+                {{ form.type }}
+            </div>
+
+            <!-- Quantity -->
+            <div class="mb-3">
+                <label class="form-label">Quantity</label>
+                {{ form.quantity }}
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
