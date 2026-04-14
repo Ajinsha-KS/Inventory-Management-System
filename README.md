@@ -45,14 +45,4 @@ pip install -r requirements.txt
 python manage.py runserver
 
 
- 📸 Screenshots
-
-### Dashboard
-![Dashboard](dashboard.png)
-
-### Add Product
-![Add Product](add_product.png)
-
-### Transaction
-![Transaction](transaction.png)
 
